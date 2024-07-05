@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>关于 | YXianx</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="shortcut icon" href="https://www.yxianx.lol/favicon.ico?v=1720147615991">
+<link rel="stylesheet" href="https://www.yxianx.lol/styles/main.css">
+
+
+
+<link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.0/animate.min.css" rel="stylesheet">
+<style>
+:root {
+  --animate-duration: 800ms;
+}
+</style>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+
+
+
+    <meta name="description" content="
+欢迎来到我的小站呀，很高兴遇见你！🤝
+
+🏠 关于本站
+👨‍💻 博主是谁
+⛹ 兴趣爱好
+📬 联系我呀
+..." />
+    <meta name="keywords" content="" />
+    
+      <link href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet">
+      <script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <header class="header">
+  <div class="banner animate__animated animate__fadeIn">
+    <div class="top-container">
+      <div class="site-title-container">
+        <img src="https://www.yxianx.lol/images/avatar.png?v=1720147615991" class="site-logo">
+        <div class="site-text">
+          <h1 class="site-title">
+            YXianx
+          </h1>
+          <div class="site-description-social">
+            <div class="site-description">
+              🗒 碎碎念
+            </div>
+            <div class="site-social">
+              
+                
+                  <a class="social-link" href="https://gitee.com/YXianx" target="_blank">
+                    <i class="fa fa-github"></i>
+                  </a>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      
+        
+            <a href="/" class="site-nav">
+              🏡首页
+            </a>
+          
+        
+        
+            <a href="/tags" class="site-nav">
+              🏷️标签
+            </a>
+          
+        
+        
+            <a href="/archives" class="site-nav">
+              📃归档
+            </a>
+          
+        
+        
+            <a href="/post/about" class="site-nav">
+              👤关于
+            </a>
+          
+        
+        
+            <a href="/post/firend-links" class="site-nav">
+              👨🏼‍🤝‍🧑🏼友链
+            </a>
+          
+        
+    </div>
+  </div>
+</header>
+
+      <div class="main-container">
+        <div class="content-container animate__animated animate__fadeInUp">
+          <div class="post-detail">
+            <h2 class="post-title">关于</h2>
+            <div class="post-date">2019-01-25&emsp;&emsp;31 字 &emsp;阅读时间 1 分钟</div>
+            
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站">🏠 关于本站</h2>
+<h2 id="博主是谁">👨‍💻 博主是谁</h2>
+<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
+<h2 id="联系我呀">📬 联系我呀</h2>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+          
+
+
+<script>
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let activeClass = 'active-toc';
+  let tocContent;
+  
+  function addActiveClass(index) {
+    if (index >= 0 && index < lList.length) {
+      lList[index].classList.add(activeClass);
+    }
+  }
+
+  function removeActiveClass(index) {
+    if (index >= 0 && index < lList.length) {
+      lList[index].classList.remove(activeClass);
+    }
+  }
+  
+  function getElementTop (el) {
+    let actualTop = el.offsetTop
+    let current = el.offsetParent
+    while (current !== null) {
+      actualTop += current.offsetTop
+      current = current.offsetParent
+    }
+    return actualTop
+  }
+
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop;
+    let eps = window.innerHeight;
+
+    let current = 0, closestOffset = 0x3f3f3f3f, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      let offset = Math.abs(getElementTop(hList[i]) - scrollTop);
+      if (offset > eps) {
+        continue;
+      }
+      if (offset < closestOffset) {
+        current = i;
+        closestOffset = offset;
+        hasFind = true;
+      }
+    }
+    if(!hasFind) {
+      return;
+    }
+
+    removeActiveClass(lastIndex)
+    addActiveClass(current);
+    lastIndex = current;
+  });
+
+  window.addEventListener('load', function () {
+    tocContent = document.querySelector('.markdownIt-TOC');
+    if (!tocContent) return;
+
+    postBody = document.querySelector('.post-content');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+
+    let con = tocContent.children[0].children[0];
+    tocContent.innerHTML = con.innerHTML;
+    lList = document.querySelectorAll('.post-toc li');
+
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
+</script>
+
+        </div>
+      </div>
+
+      <footer class="footer animate__animated animate__flipInX">
+  <div class="site-footer">
+    <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></p>
+    <p>© YXianx · Powered by <a href="https://gridea.dev/">Gridea</a> & <a href="https://github.com/xxxuuu/gridea-theme-autumn">Autumn</a> | <a class="rss" href="https://www.yxianx.lol/atom.xml" target="_blank">RSS</a></p>
+  </div>
+</footer>
+
+
+    </div>
+
+    <script type="application/javascript">
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+  <script>
+    window.onload = () => {
+        hljs.highlightAll()
+    }
+  </script>
+
+
+<script>
+  const images = document.querySelectorAll('.post-content img');
+
+  console.log(images)
+  for (let i = 0; i < images.length; i++) {
+    const img = images[i];
+
+    const link = document.createElement('a');
+    link.href = img.src;
+	link.setAttribute("data-fancybox", "gallery");
+
+    img.parentNode.insertBefore(link, img);
+    link.appendChild(img);
+  }
+</script>
+
+
+
+
+  </body>
+</html>

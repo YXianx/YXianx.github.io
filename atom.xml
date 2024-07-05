@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://www.yxianx.lol</id>
+    <title>YXianx</title>
+    <updated>2024-07-05T02:46:57.863Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://www.yxianx.lol"/>
+    <link rel="self" href="https://www.yxianx.lol/atom.xml"/>
+    <subtitle>🗒 碎碎念</subtitle>
+    <logo>https://www.yxianx.lol/images/avatar.png</logo>
+    <icon>https://www.yxianx.lol/favicon.ico</icon>
+    <rights>All rights reserved 2024, YXianx</rights>
+    <entry>
+        <title type="html"><![CDATA[分享 · 免费且实用的工具网站]]></title>
+        <id>https://www.yxianx.lol/post/share/</id>
+        <link href="https://www.yxianx.lol/post/share/">
+        </link>
+        <updated>2024-06-28T09:12:45.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<blockquote>
+<p>在日常的开发过程中，经常会遇到各种各样的需求，从文件处理到图片编辑，从在线学习到团队协作，每个领域都有无数的工具网站可供选择。但有时候，我们可能会迷失在众多的选项中，不知道哪些工具是真正值得一试的。在急用的时候往往会找不到相对应的网址(说的就是我= =!)，因此而萌生制作一个工具网址记录帖，希望能为你的工作和生活带来便利。</p>
+</blockquote>
+<h2 id="开发辅助工具">开发辅助工具</h2>
+<h3 id="boce"><a href="https://www.boce.com/">Boce</a></h3>
+<p>用于检测网站访问速度，从不同的地区去访问目标网站测试出平均加载时长</p>
+<h2 id="️图片编辑与处理">✍️图片编辑与处理</h2>
+<h3 id="tinypng"><a href="https://tinypng.com/">TinyPNG</a></h3>
+<p>日常 Web 开发必备，能将素材图片内存大小猛猛缩减，且画质看不出来变化~</p>
+<h3 id="convertio"><a href="https://convertio.co/zh/">Convertio</a></h3>
+<p>图片文件转换器，在图片需要转成 webp 的时候用上了 - -</p>
+<h3 id="remove"><a href="https://www.remove.bg/zh">Remove</a></h3>
+<p>良心的免费抠图网站，常用于扣除物体的背景</p>
+<h2 id="文件操作处理">💾文件操作处理</h2>
+<h3 id="airportal"><a href="https://airportal.cn/">Airportal</a></h3>
+<p>无需登录即可传输文件，省去了登录微信或网页版微信传输助手的麻烦事，非常推荐 (热铁盒YYDS)</p>
+<h2 id="️壁纸与banner">🖼️壁纸与Banner</h2>
+<h3 id="wallhave"><a href="https://wallhaven.cc/">Wallhave</a></h3>
+<p>我的评价是无论什么类型的图，在这个网站都能找到(甚至还能根据颜色去找与之匹配的图</p>
+<h2 id="️社畜与ppt">🤦‍♂️社畜与PPT</h2>
+<h3 id="slidesgo"><a href="https://slidesgo.com/">Slidesgo</a></h3>
+<p>一个月两次免费下载机会，对于不常做 PPT 的程序猿来说够够的 (比如我= =</p>
+]]></content>
+    </entry>
+</feed>
